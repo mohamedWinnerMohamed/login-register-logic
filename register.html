@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/register-style.css" />
+    <script src="../main.js" defer></script>
+  </head>
+  <body>
+    <div class="popup-overlay " id="popupOverlay"></div>
+    <div class="popup " id="successPopup">
+      <span id="popupMessage"></span>
+    </div>
+    <div class="container">
+      <div class="left">
+        <p class="welcome-text">Welcome to Route..</p>
+      </div>
+      <div class="right">
+        <form id="form" action="">
+          <div class="Btns">
+            
+            <a class="logIn-Btn" href="../logIn.html">Log-In</a>
+            <a class="signUp-Btn" href="./register.html">Sign-Up</a>
+          </div>
+
+          <div class="entries">
+            <div class="input">
+              <p>User Name</p>
+              <input id="userName" type="text" required />
+            </div>
+            <div class="input">
+              <p>E-mail</p>
+              <input id="email" type="email" required />
+            </div>
+            <div class="input">
+              <p>Password</p>
+              <input id="password" type="password" required />
+            </div>
+          </div>
+
+          <div class="check">
+            <div class="top">
+              <div>
+                <input type="checkbox" name="" id="" />
+                <p>Remember me</p>
+              </div>
+              <a href="">Forgot Password?</a>
+            </div>
+          </div>
+
+          <button class="send-logIn">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

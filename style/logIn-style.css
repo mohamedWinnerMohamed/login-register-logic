@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 0.9%;
+  align-items: center;
+}
+
+.container .left {
+  height: 97%;
+  width: 100%;
+  border-radius: 29px;
+  display: flex;
+  align-items: center;
+  padding-left: 140px;
+  background-image: linear-gradient(
+    60deg,
+    rgb(19, 53, 154),
+    rgb(59, 118, 246) 24%,
+    rgb(19, 53, 154) 70%,
+    rgb(59, 118, 246)
+  );
+  box-shadow: inset -1px -1px 20px 3px #00000073;
+}
+.container .left p {
+  color: antiquewhite;
+  font-weight: bold;
+  font-size: 3em;
+
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.container .left p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.container .right {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .right form {
+  display: flex;
+  padding: 30px;
+  width: 50%;
+  height: 64%;
+  border-radius: 29px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background-color: rgba(50, 153, 237, 0.17);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 15px 0px,
+    rgba(25, 28, 33, 0.2) 0px 15px 35px -5px,
+    rgba(0, 0, 0, 0.07) 0px 0px 0px 1px;
+}
+.container .right form .Btns {
+  width: max-content;
+  padding: 7px 8px;
+  background-color: rgba(37, 100, 235, 0.429);
+  border-radius: 25px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2em;
+}
+.container .right form .Btns a {
+  background-color: rgba(37, 100, 235, 0.567);
+  border: 1px solid transparent;
+  padding: 6px 27px;
+  border-radius: 18px;
+}
+.container .right form .Btns a:hover {
+  cursor: pointer;
+  background-color: rgba(37, 100, 235, 0.837);
+}
+.container .right form .Btns a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 1em;
+}
+.container .right form .entries {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* margin: 20px 0; */
+  width: 100%;
+  /* position: relative; */
+}
+.container .right form .entries input {
+  width: 100%;
+  border: 1px solid rgba(37, 100, 235, 0.698);
+  height: 3em;
+  border-radius: 20px;
+  padding: 10px;
+}
+.container .right form .entries input:focus {
+  background-color: #ffffff !important;
+}
+.container .right form .entries .input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .right form .entries .input p {
+  color: black;
+  position: absolute;
+  top: -8px;
+  left: 50px;
+  background-image: linear-gradient(0deg, #ffffff 50%, transparent 50%);
+  border-radius: 14px;
+  font-size: 0.7em;
+  padding: 1px 4px;
+  height: max-content;
+  width: max-content;
+}
+
+.container .right form .check {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.container .right form .check .top {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.container .right form .check .top div {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.container .right form .check .top div p {
+  font-size: 0.9em;
+}
+.container .right form .check .top a {
+  text-decoration: none;
+}
+.container .right form .check .top a {
+  font-size: 0.8em;
+}
+
+.container .right form button {
+  background-color: rgba(37, 100, 235, 0.698);
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 6px 27px;
+  font-size: 1em;
+  color: white;
+  border-radius: 18px;
+}
+.container .right form button:hover {
+  background-color: rgba(37, 100, 235, 0.837);
+  border: 1px solid rgba(22, 89, 233, 0.911);
+}
+
+/* large screen */
+
+@media (max-width: 1300px) {
+  .container .left {
+    padding-left: 80px;
+  }
+  .container .right form {
+    padding: 25px;
+    width: 70%;
+  }
+  .container .right form .Btns {
+    padding: 6px 7px;
+    gap: 8px;
+  }
+  .container .right form .Btns button {
+    padding: 5px 20px;
+  }
+  .container .right form .Btns button a {
+    font-size: 0.9em;
+  }
+  .container .right form .entries .input p {
+    left: 45px;
+  }
+}
+@media (max-width: 1100px) {
+  .container .left {
+    padding-left: 50px;
+  }
+  .container .left p {
+    font-size: 2.8em;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    padding: 0 1.5%;
+  }
+  .container .left {
+    padding-left: 30px;
+    height: 96%;
+  }
+  .container .left p {
+    font-size: 2.5em;
+  }
+  .container .right form .check .top div p {
+    font-size: 0.8em;
+  }
+  .container .right form .check .top a {
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 850px) {
+  .container .left {
+    display: none;
+  }
+  .container .right form .Btns {
+    padding: 5px 7px;
+    gap: 7px;
+  }
+  .container .right form .Btns button {
+    padding: 5px 25px;
+  }
+  .container .right form .Btns button a {
+    font-size: 1em;
+  }
+  .container .right form .check .top div p {
+    font-size: 0.9em;
+  }
+  .container .right form .check .top a {
+    font-size: 0.9em;
+  }
+}
+/* medium screen */
+@media (max-width: 750px) {
+  .container {
+    padding: 0 2%;
+  }
+  .container .right form {
+    padding: 25px;
+    width: 83%;
+  }
+}
+@media (max-width: 650px) {
+  .container .right form .Btns {
+    padding: 7px 9px;
+    gap: 7px;
+  }
+  .container .right form .Btns button {
+    padding: 5px 29px;
+  }
+  .container .right form .Btns button a {
+    font-size: 1em;
+  }
+  .container .right form .entries .input p {
+    left: 55px;
+  }
+  .container .right form .check .top div p {
+    font-size: 0.8em;
+  }
+  .container .right form .check .top a {
+    font-size: 0.8em;
+  }
+}
+/* small screen */
+@media (max-width: 470px) {
+  .container .right form .Btns {
+    padding: 6px 7px;
+  }
+  .container .right form .Btns button {
+    padding: 4px 20px;
+  }
+  .container .right form .Btns button a {
+    font-size: 0.9em;
+  }
+  .container .right form .entries .input p {
+    left: 45px;
+  }
+}
+@media (max-width: 370px) {
+  .container .right form .Btns {
+    padding: 5px 6px;
+  }
+  .container .right form .Btns button {
+    padding: 3px 14px;
+  }
+  .container .right form .Btns button a {
+    font-size: 0.8em;
+  }
+  .container .right form .entries .input p {
+    left: 35px;
+  }
+  .container .right form .check .top div p {
+    font-size: 0.65em;
+  }
+  .container .right form .check .top a {
+    font-size: 0.65em;
+  }
+  .container .right form button {
+    padding: 5px 20px;
+    font-size: 0.9em;
+  }
+}
+
+.popup {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(175deg, #af4c4c, #6c3131);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 300px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.popup.show {
+  top: 30px;
+  opacity: 1;
+}
+
+.popup.hide {
+  top: -100px;
+  opacity: 0;
+}
+
+.popup .success-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.popup.show .success-icon {
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.341);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}

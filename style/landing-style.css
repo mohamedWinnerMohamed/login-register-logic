@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box}
+  
+
+.container {
+  background-color: white;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 100px;
+  z-index: 1;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 130px);
+  /* background: #e5fff6; */
+  background-color:  rgba(50, 153, 237, 0.17);;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  transform: scaleX(3);
+  z-index: -1;
+}
+
+header {
+  background-color: rgb(3, 19, 67);
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10%;
+  box-shadow: 0px 2px 15px rgb(64, 64, 64);
+}
+.logo p {
+  color: rgb(36, 105, 255);
+  font-size: xx-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header nav {
+  display: flex;
+  gap: 16px;
+}
+
+header nav a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+header nav a:hover {
+  transform: scale(1.03);
+  transition: 0.1s linear;
+  color: rgb(149, 205, 245);
+}
+
+header .auth {
+  display: flex;
+  gap: 20px;
+}
+header .auth a {
+  padding: 4px 10px;
+  font-size: 1.3rem;
+  border-radius: 16px;
+  text-decoration: none;
+  background-color: transparent;
+}
+header .auth a:hover {
+  transform: scale(1.06);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: lightgray;
+}
+header .auth .logIn-btn {
+  padding: 4px 16px;
+  border: 1px solid rgb(36, 105, 255);
+  color: rgb(36, 105, 255);
+}
+
+header .auth .signUp-btn {
+  border: 1px solid seagreen;
+  color: seagreen;
+}
+
+.main {
+  padding: 0px 10%;
+  width: 100%;
+  height: calc(100vh - 19vh);
+  /* background-color: aquamarine; */
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.main .left {
+  line-height: 2.5;
+}
+.main .left .first {
+  font-size: 1em;
+}
+.main .left .two {
+  font-size: 1.5em;
+}
+
+.main .left .two span {
+  font-size: 1.2em;
+  color: seagreen;
+  font-weight: bold;
+}
+.main .left .three {
+  font-size: 0.8em;
+}
+
+.main .left button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid rgb(36, 105, 255);
+  color: rgb(36, 105, 255);
+  border-radius: 23px;
+  cursor: pointer;
+  margin-top: 2em;
+}
+
+.main .left button:hover {
+  transform: scale(1.07);
+  background-color: rgb(36, 105, 255);
+  color: white;
+}
+
+/* large screen */
+
+@media (max-width: 1024px) {
+  .logo p {
+    font-size: x-large;
+  }
+  header nav a {
+    font-size: 1.1rem;
+  }
+  header .auth a {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 850px) {
+  header nav a {
+    font-size: 1rem;
+  }
+  header .auth a {
+    font-size: 0.8rem;
+  }
+}
+/* medium screen */
+@media (max-width: 750px) {
+  header nav a {
+    font-size: 0.8rem;
+  }
+  header .auth a {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 650px) {
+  header nav a {
+    font-size: 0.7rem;
+  }
+  header .auth a {
+    font-size: 0.6rem;
+  }
+}
+/* small screen */
+@media (max-width: 550px) {
+  header nav {
+    display: none;
+  }
+  header .auth a {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 450px) {
+  header nav {
+    display: none;
+  }
+}
