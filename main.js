@@ -104,7 +104,7 @@ function setupHomePage() {
   });
   signOutBtn.addEventListener("click", () => {
     localStorage.removeItem("userInfo");
-    window.location.href = "/";
+    window.location.href = "index.html";
   });
 }
 
