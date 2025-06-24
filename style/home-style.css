@@ -229,26 +229,58 @@ header.animate .auth {
 
 /* medium screen */
 
+@media (max-width: 1200px) {
+  header .auth .details {
+    width: 240px;
+  }
+}
+@media (max-width: 1000px) {
+  header .auth .details {
+    width: 230px;
+  }
+}
+@media (max-width: 900px) {
+  header .auth .details {
+    width: 220px;
+  }
+}
+@media (max-width: 800px) {
+  header .auth .details {
+    width: 210px;
+  }
+}
 @media (max-width: 650px) {
+  header .auth .details {
+    width: 160px;
+    left: -140%;
+  }
   header.animate nav {
     display: none;
   }
 }
 @media (max-width: 500px) {
+  header .auth .details {
+    width: 160px;
+    left: -200%;
+  }
   .main {
     font-size: 2em;
   }
   header .auth img {
     width: 45px;
     height: 45px;
+  }
 }
-}
-@media (max-width: 300px) {
+@media (max-width: 305px) {
+  header .auth .details {
+    width: 160px;
+    left: -330%;
+  }
   .main {
     font-size: 1.5em;
   }
   header .auth img {
     width: 35px;
     height: 35px;
-}
+  }
 }
