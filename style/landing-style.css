@@ -24,8 +24,8 @@ body {
   height: calc(100vh - 130px);
   /* background: #e5fff6; */
   background-color:  rgba(50, 153, 237, 0.17);;
-  border-radius: 0 0 50% 50% / 0 0 100% 100%;
-  transform: scaleX(3);
+  border-radius: 0 0 50% 50% / 0 0 20% 20%;
+/*   transform: scaleX(3); */
   z-index: -1;
 }
 
